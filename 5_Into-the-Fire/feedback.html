@@ -16,54 +16,60 @@
       <ul class="title-area">
         <li class="name">
           <h1><a href="#">Mirman Apps</h1>
-        </li>
-        <li class="toggle-topbar menu-icon"><a href="#"></a></li>
-      </ul>
-      <section class="top-bar-section">
-        <ul class="left">
-          <li>
-            <a href="about.html">About</a>
           </li>
-          <li>
-            <a href="projects.html">Projects</a>
-          </li>
-          <li>
-            <a href="feedback.html">Feedback</a>
-          </li>
-          <li>
-            <a href="contact.html">Contact</a>
-          </li>
+          <li class="toggle-topbar menu-icon"><a href="#"></a></li>
         </ul>
-        <ul class="right">
-          <a class="button" href="#" id="add-feedback" type="button" data-reveal-id="addModal">
-            Add Feedback
-          </a>
-        </ul>
-      </section>
-    </nav>
-  </div>
-  <div class="row">
-    <div class="small-12 columns">
-      <h1>Customer Feedback</h1>
+        <section class="top-bar-section">
+          <ul class="left">
+            <li>
+              <a href="about.html">About</a>
+            </li>
+            <li>
+              <a href="projects.html">Projects</a>
+            </li>
+            <li>
+              <a href="feedback.html">Feedback</a>
+            </li>
+            <li>
+              <a href="contact.html">Contact</a>
+            </li>
+          </ul>
+          <ul class="right">
+            <a class="button" href="#" id="add-feedback" type="button" data-reveal-id="addModal">
+              Add Feedback
+            </a>
+          </ul>
+        </section>
+      </nav>
     </div>
-  </div>
-  <div class="row">
-    <div class="small-12 columns" id="feedback-list">
+    <div class="row">
+      <div class="small-12 columns">
+        <h1>Customer Feedback</h1>
+      </div>
+    </div>
+    <div class="row">
+      <div class="small-12 columns" id="feedback-list">
 
+      </div>
     </div>
-  </div>
-  <div id="addModal" class="reveal-modal" data-reveal role="dialog">
-    <h2>Add Feedback</h2>
-    <p>
-      We'd love to hear from you!
-    </p>
-    <form id="add-form">
-      <!--ADD SOME FORM ELEMENTS  -->
-      <input type="submit" class="button"/>
-    </form>
-  </div>
-  <script>
-    $(document).foundation();
-  </script>
-</body>
-</html>
+    <div id="addModal" class="reveal-modal" data-reveal role="dialog">
+      <h2>Add Feedback</h2>
+      <p>
+        We'd love to hear from you!
+      </p>
+      <form id="add-form">
+        <!--ADD SOME FORM ELEMENTS  -->
+        First Name <input type="text" id="firstname" class"inputBox"></input>
+        Last Name <input type="text" id="lastname" class"inputBox"></input>
+        Email <intput type="text" id="email" class"inputBox"></input> Email
+        Feedback for Us <input type="text" id="feedback" class"inputBox"></inpit>
+
+
+                <input type="submit" class="button"/>
+              </form>
+            </div>
+            <script>
+            $(document).foundation();
+            </script>
+          </body>
+          </html>
