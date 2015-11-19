@@ -8,6 +8,7 @@
   <script src="foundation/js/foundation.min.js"></script>
   <script src="foundation/js/foundation/foundation.topbar.js"></script>
   <script src="foundation/js/foundation/foundation.reveal.js"></script>
+  <script src="https://cdn.firebase.com/js/client/2.3.1/firebase.js"></script>
   <script src="js/feedback.js"></script>
 </head>
 <body>
@@ -61,15 +62,14 @@
         <!--ADD SOME FORM ELEMENTS  -->
         First Name <input type="text" id="firstname" class"inputBox"></input>
         Last Name <input type="text" id="lastname" class"inputBox"></input>
-        Email <intput type="text" id="email" class"inputBox"></input> Email
-        Feedback for Us <input type="text" id="feedback" class"inputBox"></inpit>
+        Email <input type="text" id="email" class"inputBox"></input>
+        Feedback for Us <input type="text" id="feedback" class"inputBox"></input>
+        <input id="submitButton" type="submit" class="button"/>
+      </form>
+    </div>
 
-
-                <input type="submit" class="button"/>
-              </form>
-            </div>
-            <script>
-            $(document).foundation();
-            </script>
-          </body>
-          </html>
+    <script>
+    $(document).foundation();
+    </script>
+  </body>
+  </html>
