@@ -68,6 +68,20 @@
       </form>
     </div>
 
+    <ul id="comments">
+      
+      function(snapshot) {
+        var data = snapshot.val();
+        for (var c in data){
+          var comment = data[c]
+          var newLi = $(document.createElement("li"));
+          newli.append(data.name);
+          $("#comments").append(newLi;)
+        }
+      }
+
+    </ul>
+
     <script>
     $(document).foundation();
     </script>

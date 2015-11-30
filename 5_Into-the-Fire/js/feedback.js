@@ -1,7 +1,8 @@
-var ref = new Firebase("https://5ire-ADSINA.firebaseio.com"); //Use your app's Firebase URL
+var ref = new Firebase("https://5ire-adsina.firebaseio.com"); //Use your app's Firebase URL
 
 ref.on("value", function(snapshot) {
   console.log(snapshot.val());
+  update(snapshot);
 }, function (errorObject) {
   console.log("The read failed: " + errorObject.code);
 });
@@ -25,3 +26,13 @@ $(document).ready(function(){
 
   });
 });
+
+function update(snapshot) {
+  var data = snapshot.val();
+  for (var c in data){
+    var comment = data[c]
+    var newLi = $(document.createElement("Li"));
+    newLi.append(data.name);
+    $("#comments").append(newLi)
+  }
+}
