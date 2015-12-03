@@ -21,6 +21,7 @@ $(document).ready(function(){
       "email": $("#email").val(),
       "message": $("#feedback").val(),
       "timestamp": new Date().getTime()
+      "likes" :
     }
 
     ref.push(fields)
@@ -33,8 +34,10 @@ function update(snapshot) {
   var data = snapshot.val();
   for (var c in data){
     var comment = data[c];
+    var likes = 
+    var commentDate = new Date(comment.timestamp);
     var newLi = $(document.createElement("li"));
-    newLi.append("<h2>" + comment.firstName + " " + comment.lastName + "</h2>" + "<h3>" + comment.message + "</h3>" + "<h4>" + comment.email + "</h4>" + "<h5>" + comment.timestamp);
+    newLi.append("<h2>" + comment.firstName + " " + comment.lastName + "</h2>" + "<h3>" + comment.message + "</h3>" + "<h4>" + comment.email + "</h4>" + "<h5>" + commentDate.toLocaleTimeString() + ", " + commentDate.toLocaleDateString());
     $("#comments").append(newLi)
   }
 }
