@@ -4,12 +4,15 @@ function addEventListeners() {
   $("#add-form").submit(function(event){
     event.preventDefault();
   });
+
   $(".likes").click(function(){
+    console.log($(this).parent().data())
     var key = $(this).parent().data("id");
-    var currentLikes = $(this).parent().data(totalLikes);
+    var currentLikes = $(this).parent().data("likes");
     var newLikes = currentLikes + 1;
+    console.log(currentLikes);
     ref.child(key).update({
-      totalLikes: newLikes
+      "likes": newLikes
     });
   });
 }
@@ -54,12 +57,13 @@ $(document).ready(function(){
 
 function update(snapshot) {
   var data = snapshot.val();
+  $("#comments").html("");
   for (var c in data){
     var comment = data[c];
     var commentDate = new Date(comment.timestamp);
     var newLi = $(document.createElement("li"));
-    newLi.data("id", c)
-    newLi.data("totalLikes", comment.totalLikes)
+    newLi.data("id", c);
+    newLi.data("likes", comment.likes);
     newLi.append("<h2>" + comment.firstName + " " + comment.lastName + "</h2>" + "<h3>" + comment.message + "</h3>" + "<h4>" + comment.email + "</h4>" + "<h5>" + commentDate.toLocaleTimeString() + ", " + commentDate.toLocaleDateString() + "</h5>" + "<h6>" + comment.likes + "</h6>" + "<button type='button' class='small likes'>Like</button>" );
     $("#comments").append(newLi)
     addEventListeners();
